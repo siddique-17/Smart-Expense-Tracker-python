@@ -29,7 +29,7 @@ def add_expense():
         writer = csv.writer(file)
         writer.writerow([date, category, amount, description])
 
-    print("✅ Expense added successfully!")
+    print("Expense added successfully!")
 
 
 
@@ -50,7 +50,7 @@ def monthly_summary():
             if row["Date"].startswith(month):
                 total += float(row["Amount"])
 
-    print(f"📊 Total expense for {month}: ₹{total}")
+    print(f"Total expense for {month}: ₹{total}")
 
 
 
@@ -68,7 +68,7 @@ def category_analysis():
 
     # Highest spending category
     max_category = max(data, key=data.get)
-    print(f"💸 Highest spending category: {max_category} (₹{data[max_category]})")
+    print(f"Highest spending category: {max_category} (₹{data[max_category]})")
 
     # Pie chart
     plt.pie(data.values(), labels=data.keys(), autopct='%1.1f%%')
@@ -99,7 +99,7 @@ def main():
         elif choice == '4':
             category_analysis()
         elif choice == '5':
-            print("👋 Exiting...")
+            print("Exiting...")
             break
         else:
             print("Invalid choice!")
